@@ -1,9 +1,8 @@
 require './lib/checkout'
-
 require 'pry'
 describe Checkout do
 
-
+  #NOT SURE ABOUT THIS
   subject { described_class.new }
 
   it 'adds product to basket on scan' do
@@ -14,6 +13,7 @@ describe Checkout do
     expect(subject.basket).to include product
   end
 
+  #THIS IS WHERE WE GAVE UP
   it 'calculates total_price' do
     product = Checkout::PRODUCT_001
     expect(subject.total_price).to eq product.price
@@ -23,4 +23,5 @@ describe Checkout do
    expected_output
    expect(subject.promotional_rules).to
  end
+
 end
